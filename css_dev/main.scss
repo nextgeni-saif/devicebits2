@@ -1,0 +1,140 @@
+// Variables
+$brand-primary: #cf0;
+$brand-secondary: #000;
+$body-text-color: #000;
+
+$highlight: rgba(255, 255, 0, 0.5);
+$highlight-hide: rgba(255, 255, 0, 0.0);
+
+
+
+body {
+	color: $body-text-color;
+}
+
+ul, ol {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.panel-default>.panel-heading {
+	color: $body-text-color;
+	text-align: center;
+	font-weight: 600;
+}
+
+.panel {
+	box-shadow: none;
+	border: 0px;
+}
+
+.tutorial-steps-list {
+	a {
+		display: block;
+		padding: 10px 5px;
+		border-bottom: 1px solid #eee;
+		text-decoration: none;
+		color: #333;
+		&:hover {
+			color: #000;
+			background-color: #f9f9f9;
+		}
+	}
+}// tutorial-steps-list
+
+
+.phone {
+	position: relative;
+	z-index: 1;
+	.main-button {
+		position: absolute;
+		z-index: 5;
+		&.show {
+			// background-color: rgba(255, 255, 0, 0.5);
+			background-color: $highlight;
+			-webkit-animation: highlight 1s infinite; /* Chrome, Safari, Opera */
+			animation: highlight 1s infinite;
+		}
+		&:hover {
+			background-color: $highlight;
+		}
+	}
+
+	.lcd {
+		overflow: hidden;
+		position: absolute;
+		z-index: 2;
+		.lcd-screen {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}// phone
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes highlight {
+	0% { background-color: $highlight; }
+	50% { background-color: $highlight-hide; }
+	100% { background-color: $highlight; }
+}
+
+@keyframes highlight {
+	0% { background-color: $highlight; }
+	50% { background-color: $highlight-hide; }
+	100% { background-color: $highlight; }
+}
+
+
+
+
+
+// Theme based on Domain
+
+#deviceBits {
+	header {
+		background-color: $brand-primary;
+		border-bottom: 10px solid $brand-secondary;
+		min-height: 130px;
+		padding-top: 30px;
+		margin-bottom: 30px;
+		h1 {
+			font-size: 16px;
+		}
+		#divSearch {
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+	}// header
+
+
+	.tutorial-steps-list {
+		a {
+			border-bottom-color: darken($brand-primary, 30%);
+			color: #fff;
+			&:hover {
+				background-color: #222;
+			}
+		}
+		li.active {
+			a {
+				color: #000;
+				background-color: $brand-primary;
+			}
+		}
+	}// tutorial-steps-list
+
+
+	.panel-default>.panel-heading,
+	.panel-footer {
+		background-color: $brand-primary;
+	}
+	.panel-body {
+		background-color: $brand-secondary;
+	}
+
+}// #deviceBits
+
+
+
