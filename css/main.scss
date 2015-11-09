@@ -1,0 +1,10 @@
+.phone {
+	position: relative;
+	z-index: 1;
+	.main-button {
+		position: absolute;
+		&.show {
+			background-color: yellow;
+		}
+	}
+}
