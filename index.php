@@ -117,7 +117,7 @@ $decode = json_decode($json);
           height: <?php echo $decode[$i]->buttonYSize; ?>px;
           "></a>
           <img src="http://s3.amazonaws.com/tpassets.devicebits.com/<?php echo $decode[$i]->ImageLocation; ?>" <?php if($decode[$i]->screenXSize > 0) { ?> width="<?php echo $decode[$i]->screenXSize?>" <?php } ?> <?php if($decode[$i]->screenYSize > 0) { ?> height="<?php echo $decode[$i]->screenYSize?>" <?php } ?>>
-        </div>ss<!-- .phone -->
+        </div>ssssseeeee<!-- .phone -->
 <?php
 }
 ?>
